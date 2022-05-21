@@ -30,6 +30,15 @@ Sample Output
 Explanation
 We print the sum of the array's elements: 1 + 2 + 3 + 4 + 10 + 11 = 31
  */
+fun main() {
+    val arCount = readLine()!!.trim().toInt()
+    val ar = readLine()!!.trimEnd().split(" ").map { it.toInt() }.toTypedArray()
+    val result = simpleArraySum(ar)
+    println(result)
+}
 
-class VeryBigSum {
+private fun simpleArraySum(args: Array<Int>): Int {
+    var sum = 0
+    args.forEach { sum+= it }
+    return sum
 }
